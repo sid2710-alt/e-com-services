@@ -1,0 +1,4 @@
+rootProject.name = 'e-com-services'
+
+// Include all microservices
+include 'inventory_service', 'order-servie', 'product-service'

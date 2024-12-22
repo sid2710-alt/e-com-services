@@ -1,6 +1,4 @@
-package com.example.springpractise.order_servie.model;
-
-import java.math.BigDecimal;
+package com.example.springpractice.inventory_service.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,21 +9,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
-@Table(name = "t_order_line_items")
+@Table (name = "t_inventory")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-public class OrderLineItems {
-    @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long id;
-    private String skuCode;
-    private BigDecimal price;
-    private Integer quantity;
+public class Inventory {
+  @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
+  private Long id;
+  private String skuCode;
+  private Integer quantity;
 }
-
