@@ -1,4 +1,23 @@
-rootProject.name = 'e-com-services'
+// Root-level build.gradle
 
-// Include all microservices
-include 'inventory_service', 'order-servie', 'product-service'
+subprojects {
+    // Apply the Java plugin to all subprojects
+    apply plugin: 'java'
+
+    group = 'com.example'
+    version = '1.0.0'
+
+    repositories {
+        mavenCentral()
+    }
+
+    // Shared dependencies (you can add common dependencies here)
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    }
+
+    // You can also add common tasks
+    task clean(type: Delete) {
+        delete rootProject.buildDir
+    }
+}
